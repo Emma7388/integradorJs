@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+.btn {
+  width: 120px;
+  margin: 1.5rem 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.fa {
+  cursor: pointer;
+}
+
+.form-field input {
+  color: #ddd;
+}
+
+.alert-message {
+  visibility: hidden;
+}
+
+.form-field.error input {
+  border-color: red;
+}
+
+.form-field.success input {
+  border-color: green;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin: 20px;
+}
+
+.home a i {
+  color: white;
+}

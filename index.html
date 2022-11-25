@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genesis Catering |</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="120x120"
+      href="./assets/img/logo.png"
+    />
+
+    <link rel="stylesheet" href="./assets/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="./assets/img/logo.png"
+        alt="Logo Genesis Catering"
+        class="logo"
+      />
+      <nav class="navbar">
+        <div class="menu-label">
+          <img src="./assets/img/menu.png" alt="" class="menu-icon" />
+        </div>
+
+        <ul class="navbar-list">
+          <li><a class="navbar-link" href="#hero">Home</a></li>
+          <li><a class="navbar-link" href="#discover">Nosotros</a></li>
+          <li><a class="navbar-link" href="#products">Menu</a></li>
+          <li>
+            <a class="navbar-link" href="./assets/login/login.html">LogIn</a>
+          </li>
+        </ul>
+        <div class="cart-label">
+          <i class="fa-solid fa-cart-shopping cart-icon"></i>
+        </div>
+
+        <!-- Carrito -->
+        <div class="cart">
+          <h2>Tu Pedido</h2>
+          <div class="cart-container"></div>
+          <span class="divider"></span>
+          <div class="cart-total">
+            <p>Total:</p>
+            <span class="total">0$</span>
+          </div>
+          <button class="btn-buy">Comprar</button>
+          <button class="btn-delete">Vaciar carrito</button>
+        </div>
+        <div class="overlay"></div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- hero -->
+      <section id="hero">
+        <div class="heroAdd">Rico,Sano y Natural</div>
+        <div class="hero-container">
+          <div class="containerImgs">
+            <img class="img1" src="./assets/img/products/licuados.png" alt="" />
+            <div class="subimg">
+              <img
+                class="img2"
+                src="./assets/img/products/ensaladaCesar.png"
+                alt=""
+              />
+              <img class="img3" src="./assets/img/products/helado.png" alt="" />
+            </div>
+            <img
+              class="img4"
+              src="./assets/img/products/parrillada.png"
+              alt=""
+            />
+          </div>
+          <h1>Génesis <span>Catering</span></h1>
+          <p>
+            Casero y sabroso. Acá se hace todo el trabajo de preparación con el
+            mismo objetivo que la abuela, el mejor Sabor!
+          </p>
+          <div class="containerBtnsHero">
+            <button class="btn-add">
+              <a href="#products">Ver Menú!</a>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Fin Hero -->
+
+      <!-- info -->
+      <section id="info">
+        <h2>Elije tu Menú</h2>
+        <div class="info-cards-container">
+          <div class="info-card">
+            <img src="./assets/img/info/info-icon-menuD.jpg" alt="Icono NFTs" />
+            <h3>Selecciona</h3>
+            <p>Las compras se añadiran al carrito automaticamente!</p>
+          </div>
+          <div class="info-card">
+            <img
+              src="./assets/img/info/info-icon-menuDi.jpg"
+              alt="imagen de menu digital"
+            />
+            <h3>Digitalizado</h3>
+            <p>Menu completamente en linea y stock actualizado</p>
+          </div>
+          <div class="info-card">
+            <img
+              src="./assets/img/info/info-icon-menuP.jpeg"
+              alt="Icono NFTs"
+            />
+            <h3>¡Comodo!</h3>
+            <p>
+              Podes pagar online y retirar el producto sin necesidad de esperar
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Fin info -->
+
+      <!-- discover -->
+      <section id="discover">
+        <!-- discover info text -->
+        <div class="discover-info">
+          <h2>Nuestras recetas son únicas</h2>
+          <p></p>
+        </div>
+        <!-- Fin discover info text -->
+        <!-- discover cards -->
+
+        <div class="discover-cards">
+          <div class="discover-cardsInfo">
+            <img
+              src="./assets/img/discover/discoverPlatoRavioles.png"
+              alt="Plato blanco con rabioles y salsa bolognsa con queso rayado"
+            />
+            <h3>Pastas</h3>
+            <p>Toda la variedad de pastas en un solo lugar!</p>
+          </div>
+          <div class="discover-cardsInfo">
+            <img
+              src="./assets/img/discover/discoverShawarma.png"
+              alt="Milanesa con arrtoz y pure."
+            />
+            <h3>Shawarma</h3>
+            <p>Amplia variedad para tus eventos</p>
+          </div>
+          <div class="discover-cardsInfo">
+            <img
+              src="./assets/img/discover/discoverAsado.png"
+              alt="Pollo y carne asado"
+            />
+            <h3>Asados</h3>
+            <p>Carne de primera calidad</p>
+          </div>
+        </div>
+        <!-- Fin cards info -->
+      </section>
+      <!-- Fin discover -->
+
+      <!-- products -->
+      <section id="products">
+        <h2>MENU</h2>
+        <!-- <img
+          class="imgMenuProducts"
+          src="/assets/img/info/info-icon-menu.png"
+          alt=""
+        /> -->
+        <!-- categories -->
+        <div class="categories">
+          <button class="category active">TODO</button>
+          <button class="category" data-category="pastas">PASTAS</button>
+          <button class="category" data-category="carnes">CARNES</button>
+          <button class="category" data-category="empanadas">EMPANADAS</button>
+          <button class="category" data-category="pizzas">PIZZAS</button>
+          <button class="category" data-category="postres">POSTRES</button>
+        </div>
+        <!-- products -->
+        <div class="products-container"></div>
+        <button class="btn-load">Ver Más</button>
+      </section>
+    </main>
+
+    <footer>
+      <ul class="footer-links">
+        <li><a href="#">Términos de Uso</a></li>
+        <li><a href="#">Trabajá con Nosotros</a></li>
+        <li><a href="#">Soporte</a></li>
+      </ul>
+      <div class="container-contact-iframe">
+        <div class="container-contact">
+          <p>Estamos en Campana</p>
+          <p>Tel: (03489)430964</p>
+          <p>De Miercoles a Lunes de 11hs a 23hs</p>
+          <div class="container-web">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-whatsapp"></a>
+          </div>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1166.6981534877937!2d-58.96691502507823!3d-34.19950240845043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb710d7d15799b%3A0x1880141abf54e105!2sG%C3%A9nesis%20catering!5e0!3m2!1ses-419!2sar!4v1669378396345!5m2!1ses-419!2sar"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </footer>
+
+    <div class="add-modal"></div>
+
+    <script src="./assets/data.js"></script>
+    <script src="./assets/index.js"></script>
+  </body>
+</html>
