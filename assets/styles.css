@@ -293,8 +293,6 @@ header {
   padding: 10px;
 }
 
-/* ///// */
-
 .hero-container {
   padding: 10px;
   border-radius: 15px;
@@ -393,9 +391,8 @@ h1:hover {
   flex-flow: row wrap;
 }
 .hero-container > p {
-  background: -webkit-linear-gradient(350deg, yellow, black 80%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: rgb(193, 165, 65);
+  font-family: var(--josefin400);
 }
 
 .info-cards-container {

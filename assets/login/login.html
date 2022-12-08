@@ -8,17 +8,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="./font-awesome-4.7.0/css/font-awesome.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/5a8f3232d1.js"
-      crossorigin="anonymous"
-    ></script>
-
     <link rel="stylesheet" href="./styles.css" />
     <title>Log!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
@@ -60,16 +62,43 @@
             type="email"
             name=""
             id="requestEmail"
-            placeholder="Enter Your Email"
+            placeholder="Ingrese su Email"
           />
           <small class="alert-message">Error</small>
         </div>
         <button class="btn red" type="submit">Solicitud</button>
       </form>
       <div class="home">
-        <a href="/index.html"><i class="fa-solid fa-house"></i></a>
+        <a href="/index.html"><i class="fa-solid fa-house">volver</i></a>
       </div>
     </div>
+    <footer>
+      <div class="container-contact-iframe">
+        <div class="container-contact">
+          <p>Estamos en Campana</p>
+          <p>Tel: (03489)430964</p>
+          <p>De Miercoles a Lunes de 11hs a 23hs</p>
+          <div class="container-web">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-whatsapp"></a>
+          </div>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1166.6981534877937!2d-58.96691502507823!3d-34.19950240845043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb710d7d15799b%3A0x1880141abf54e105!2sG%C3%A9nesis%20catering!5e0!3m2!1ses-419!2sar!4v1669378396345!5m2!1ses-419!2sar"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </footer>
+    <video autoplay muted loop id="myVideo">
+      <source
+        src="../video/pexels-pasha-vorotilin-6005178.mp4"
+        type="video/mp4"
+      />
+    </video>
 
     <script src="./login.js"></script>
   </body>

@@ -1,33 +1,17 @@
-// Contenedor de productos
-const products = document.querySelector(".products-container");
-// Contenedor de productos del carrito
-const productsCart = document.querySelector(".cart-container");
-//El total en precio del carrito
-const total = document.querySelector(".total");
-// El contenedor de las categorías
-const categories = document.querySelector(".categories");
-// Un htmlCollection de botones de todas las categorías (mostrar el dataset)
-const categoriesList = document.querySelectorAll(".category");
-// Botón de ver más
-const btnLoad = document.querySelector(".btn-load");
-// Botón de comprar
-const buyBtn = document.querySelector(".btn-buy");
-// Botón para abrir y cerrar carrito
-const cartBtn = document.querySelector(".cart-label");
-// Botón para abrir y cerrar menú
-const barsBtn = document.querySelector(".menu-label");
-// Carrito
-const cartMenu = document.querySelector(".cart");
-//  Menú (Hamburguesa)
-const barsMenu = document.querySelector(".navbar-list");
-//  Overlay para tirar facha abajo del menú hamburguesa y el cart.
-const overlay = document.querySelector(".overlay");
-//  Modal de agregado al carrito.
-const successModal = document.querySelector(".add-modal");
-//  Modal de agregado al carrito.
-const deleteBtn = document.querySelector(".btn-delete");
-//  Menu Today.
-const menuToday = document.querySelector(".menuToday");
+//intento de query horizontal
+window.addEventListener("orientationchange", function () {
+  if (window.orientation === 90) {
+    changeOrientation.style.display = "none";
+    deleteIfOrientation.style.display = "none";
+    deleteIfOrientationImg1.style.display = "none";
+    deleteIfOrientationImg3.style.display = "none";
+  }
+  changeOrientation.style.display = "flex";
+  deleteIfOrientation.style.display = "flex";
+  deleteIfOrientationImg1.style.display = "flex";
+  deleteIfOrientationImg3.style.display = "flex";
+});
+
 //  Storage.
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 const saveLocalStorage = (cartList) => {
@@ -62,7 +46,7 @@ const renderProduct = (product) => {
 
 const renderDividedProducts = (index = 0) => {
   products.innerHTML += productsController.dividedProducts[index]
-    .map(renderProduct) // .map((e) => renderProduct(e))
+    .map(renderProduct)
     .join("");
 };
 
@@ -75,7 +59,6 @@ const renderFilteredProducts = (category) => {
 
 const renderProducts = (index = 0, category = undefined) => {
   if (!category) {
-    // !undefined === true
     renderDividedProducts(index);
     return;
   }
@@ -83,17 +66,14 @@ const renderProducts = (index = 0, category = undefined) => {
 };
 
 // LOGICA DE FILTROS
-
-// funcion para cambiar todos los estados relacionados a los filtros
 const changeFilterState = (e) => {
   const selectedCategory = e.target.dataset.category;
-  // necesito cambiar el estado visual de los botones
+
   changeBtnActiveState(selectedCategory);
-  // necesito evaluar si el boton ver mas se muestra o no
   changeShowMoreBtnState(selectedCategory);
 };
 
-// funcion para cambiar el estado visual de las categorias (la categoria seleccionada)
+// Categoria seleccionada
 const changeBtnActiveState = (selectedCategory) => {
   const categories = [...categoriesList];
   categories.forEach((categoryBtn) => {
@@ -105,7 +85,7 @@ const changeBtnActiveState = (selectedCategory) => {
   });
 };
 
-// evaluar si sacamos o no el boton mostrar mas
+// Mostrar btn MAS
 const changeShowMoreBtnState = (category) => {
   if (!category) {
     btnLoad.classList.remove("hidden");
@@ -178,7 +158,7 @@ const closeOnOverlayClick = () => {
   overlay.classList.remove("show-overlay");
 };
 
-// Logica de agregado de productos y manejo del carrito.
+// ADD CART
 
 const renderCartProduct = (cartProduct) => {
   const { id, name, price, img, quantity } = cartProduct;
@@ -198,12 +178,12 @@ const renderCartProduct = (cartProduct) => {
 };
 
 const renderCart = () => {
-  // Si el carrito esta vacío
+  // CARRITO VACIO
   if (!cart.length) {
     productsCart.innerHTML = `<p class="empty-msg"> No hay productos en el carrito. </p>`;
     return;
   }
-  // Renderizamos lo que hay
+  // CARRITO NO VACIO
   productsCart.innerHTML = cart.map(renderCartProduct).join("");
 };
 
